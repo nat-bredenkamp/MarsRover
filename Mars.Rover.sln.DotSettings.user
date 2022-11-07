@@ -1,0 +1,13 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=10c803a5_002D0826_002D420d_002Dbbf5_002D1be79f58aa24/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CreateSetsDimenions #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::DB71940D-49F0-405A-B7B3-E0258094AC6A::net6.0::Mars.Rover.Core.PlateauTests.CreateSetsDimenions&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=28050150_002D982d_002D4ae8_002Db675_002D77ac59956d21/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CreateSetsDimenions" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::DB71940D-49F0-405A-B7B3-E0258094AC6A::net6.0::Mars.Rover.Core.RoverTests.CanCreateWithInstructions&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::DB71940D-49F0-405A-B7B3-E0258094AC6A::net6.0::Mars.Rover.Core.RoverTests.CanCreateWithInstructions2&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::DB71940D-49F0-405A-B7B3-E0258094AC6A::net6.0::Mars.Rover.Core.PlateauTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

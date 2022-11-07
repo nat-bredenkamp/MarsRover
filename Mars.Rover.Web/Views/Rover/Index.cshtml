@@ -1,0 +1,77 @@
+﻿@model Mars.Rover.Web.ViewModels.RoverViewModel;
+
+@{
+    var width = @Model.Plateau.Width * 100;
+    var height = @Model.Plateau.Height * 100;
+}
+<h2>Rover Paths</h2>
+<canvas id="myCanvas" width="@width" height="@height" style="border:1px solid #000000;"></canvas>
+
+@section scripts {
+    <script type="text/javascript">
+    
+        $(document).ready(function(){
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext('2d');
+           
+            drawGrid(ctx, @width, @height, 100);
+            drawPaths(ctx);
+        });
+        
+    var drawGrid = function(ctx, w, h, step) {
+        ctx.beginPath(); 
+        ctx.strokeStyle = 'rgb(32,32,32)';
+    
+        for (var x=0;x<=w;x+=step) {
+            ctx.lineWidth = x % step === 0 ? 1 : 2;
+            ctx.moveTo(x, 0);
+            ctx.lineTo(x, h);
+            ctx.stroke(); 
+        }
+    
+        ctx.beginPath(); 
+        for (var y=0;y<=h;y+=step) {
+            ctx.lineWidth = x % step === 0 ? 1 : 2;
+            ctx.moveTo(0, y);
+            ctx.lineTo(w, y);
+        }
+        ctx.stroke(); 
+    };
+
+    var drawPaths = function (ctx){
+        @foreach (var rover in Model.Rovers)
+        {
+            <text>
+               ctx.beginPath();
+               ctx.lineWidth = 5;
+               var count = 0;
+               ctx.strokeStyle = "@rover.Key";
+               ctx.fillStyle = "@rover.Key";
+               var startX = @(rover.Value[0].X * 100);
+               var startY = @(height - rover.Value[0].Y * 100);
+               var finalX = 0;
+               var finalY = 0;
+               ctx.moveTo(startX, startY);
+               ctx.arc(startX, startY, 10, 0, 2 * Math.PI);
+            </text>
+
+            @for (var i = 1; i < rover.Value.Count; i++)
+            {
+                <text>
+                    finalX = @(rover.Value[i].X * 100);
+                    finalY = @(height - rover.Value[i].Y * 100);
+                    ctx.lineTo(finalX, finalY);
+                </text>
+            }
+            <text>
+            
+            ctx.stroke();
+            ctx.fillRect(finalX - 10, finalY - 10, 20, 20);
+            ctx.closePath();
+            </text>
+        }
+    };
+
+</script>
+}
+
