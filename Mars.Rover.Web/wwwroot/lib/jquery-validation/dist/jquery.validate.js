@@ -660,6 +660,9 @@ $.extend( $.validator, {
 		},
 
 		clean: function( selector ) {
+			if ( typeof selector === "string" ) {
+				return $( this.currentForm ).find( selector )[ 0 ];
+			}
 			return $( selector )[ 0 ];
 		},
 
@@ -1037,14 +1040,21 @@ $.extend( $.validator, {
 		},
 
 		validationTargetFor: function( element ) {
+			var $element;
 
 			// If radio/checkbox, validate first element in group instead
 			if ( this.checkable( element ) ) {
 				element = this.findByName( element.name );
 			}
 
+			if ( typeof element === "string" ) {
+				$element = $( this.currentForm ).find( element );
+			} else {
+				$element = $( element );
+			}
+
 			// Always apply ignore filter
-			return $( element ).not( this.settings.ignore )[ 0 ];
+			return $element.not( this.settings.ignore )[ 0 ];
 		},
 
 		checkable: function( element ) {
