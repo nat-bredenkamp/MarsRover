@@ -11,18 +11,27 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="MessagePack" Version="2.5.301" />
+        <PackageReference Include="Microsoft.Build.Tasks.Core" Version="17.8.43" />
+        <PackageReference Include="Microsoft.Data.SqlClient" Version="2.1.7" />
+        <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.34.0" />
       <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
       <PackageReference Include="Microsoft.VisualStudio.Web.CodeGenerators.Mvc" Version="6.0.10" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
         <PackageReference Include="Microsoft.Build" Version="17.0.0" />
         <PackageReference Include="Microsoft.Build.Runtime" Version="17.0.0" />
-        <PackageReference Include="Microsoft.Build.Framework" Version="17.0.0" />
+        <PackageReference Include="Microsoft.Build.Framework" Version="17.8.43" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
           <PrivateAssets>all</PrivateAssets>
         </PackageReference>
+        <PackageReference Include="NuGet.Common" Version="6.2.4" />
+        <PackageReference Include="NuGet.Protocol" Version="5.11.7" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.34.0" />
+        <PackageReference Include="System.Net.Http" Version="4.3.4" />
+        <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
     </ItemGroup>
 
     <ItemGroup>
